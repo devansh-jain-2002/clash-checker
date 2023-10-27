@@ -47,5 +47,5 @@ def is_not_clashing_with_template(time_str,template):
         if(is_clashing(time_table(get_time_string(courses)),time_table(time_str))):
             return False
     return True
-template = ['CS330A','CS340A','CS345A','CS300A']
+template = ['CS335','CS425','CS614']
 df1 = df[df["Time"].apply(is_not_clashing_with_template,args=(template,))].to_excel("output.xlsx")
